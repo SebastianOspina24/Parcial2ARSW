@@ -1,0 +1,22 @@
+
+
+
+* CONDICIÓN DE CARRERA 1:
+
+	REGIÓN CRÍTICA: Se registren 2 Jugadores en el mismo instante con un mismo numero
+
+
+	SOLUCIÓN: Para esto se usa un SET lo que no permite hacer la Insercion de un valor repetido, si ya existe un competidor no puede tener otro igual
+
+
+* CONDICIÓN DE CARRERA 2:
+
+        REGIÓN CRÍTICA: 2 Jugadores lleguen al tiempo a la meta
+
+
+        SOLUCIÓN: Mi Solucion es usar un Message Breaker para de esta forma interceptar los mensajes de victoria y estos deben entrar de forma syncronizada al metodo,
+                Por lo que si dos ganan uno llega primero volviendo este ganador, y cuando llega el otro ya no puede entrar porque ya tenemos un gandor.
+
+
+....
+
